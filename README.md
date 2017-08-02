@@ -1,5 +1,5 @@
 ![Image](https://api.monosnap.com/rpc/file/download?id=qvQ4RXilpamDt6abtIe0N8SM0x8WwH)
-
+[![Build Status](https://travis-ci.org/tyeung2017/sunsetly.svg?branch=master)](https://travis-ci.org/tyeung2017/sunsetly)
 ## Sun Setly
 This application finds out the exact time of sunrise/sunrise for a chosen city/date by a user. To check out the application, please click here
 
@@ -45,7 +45,7 @@ This application finds out the exact time of sunrise/sunrise for a chosen city/d
 
 ### Stretch Goal:
 
-Convert UTC times 
+Convert UTC times   
 Lovely CSS layouts
 
 
