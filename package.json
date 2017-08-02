@@ -4,7 +4,8 @@
   "description": "![Image](https://api.monosnap.com/rpc/file/download?id=qvQ4RXilpamDt6abtIe0N8SM0x8WwH)",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test/test.js",
+    "start": "node src/server.js"
   },
   "repository": {
     "type": "git",
