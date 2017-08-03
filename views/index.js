@@ -9,6 +9,7 @@ cityInput.addEventListener('submit', function(e) { //event listener for any chan
   var date = document.getElementById('date').value;
   //please check if input is valid
   if(cityName.match("^[a-zA-Z0-9,\\s]+$")){
+    result.style.display = 'block'; // allowed us to hide results box prior to submitting results
     result.innerText = "Loading..."
     document.getElementById("info").reset();
     var url = '/sunset?' + 'cityname=' + encodeURI(cityName) + '&date=' + date;
