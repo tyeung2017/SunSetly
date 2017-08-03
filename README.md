@@ -43,7 +43,7 @@ npm start
 
 + **CI** Employ continuous intergration on your project with Travis or a similar tool. (If you decide to use Travis, we strongly recommend that you host this project in your own repo rather than in your cohort's FAC repository to avoid all builds getting queued together) (done)
 
-+ **Code Coverage** Use CodeCov or a similar tool for test coverage.
++ **Code Coverage** Use CodeCov or a similar tool for test coverage. (done)
 
 + Display continuous intergration and code coverage badges on your project README. (CI-done)
 
