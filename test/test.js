@@ -23,10 +23,10 @@ test('Home route', (t) => {
 test('Sunset router', (t) => {
   shot.inject(router, {
     method: 'get',
-    url: '/sunset?cityname=paris&date=' //fix /sunset url
+    url: '/sunset?cityname=paris&date=2017-08-03' //fix /sunset url
   }, (res) => {
     t.equal(res.statusCode, 200, 'should response with status code of 200');
-    t.equal(res.payload, 'You are searching for paris\nTime in UTC:\nsunrise:4:26:21 AM, sunset:7:27:16 PM')
+    t.equal(res.payload, 'You are searching for paris\nTime in UTC:\nsunrise:4:27:43 AM, sunset:7:25:44 PM')
     t.end();
   })
 })
@@ -43,19 +43,16 @@ test('Views router', (t) => {
 })
 
 
-
-
-// this should return 500 but it crashes
-// test('Sunset router', (t) => {
-//   shot.inject(router, {
-//     method: 'get',
-//     url: '/sunset' //fix /sunset url
-//   }, (res) => {
-//     t.equal(res.statusCode, 500, 'should response with status code of 200');
-//     t.equal(res.payload, 'You are searching for paris\nTime in UTC:\nsunrise:4:26:21 AM, sunset:7:27:16 PM')
-//     t.end();
-//   })
-// })
+test('Sunset router', (t) => {
+  shot.inject(router, {
+    method: 'get',
+    url: '/sunset' //fix /sunset url
+  }, (res) => {
+    t.equal(res.statusCode, 500, 'should response with status code of 200');
+    t.equal(res.payload, `<h1>you are not using our UI, are you?</h1>`)
+    t.end();
+  })
+})
 
 
 
