@@ -26,7 +26,7 @@ test('Sunset router', (t) => {
     url: '/sunset?cityname=paris&date=2017-08-03' //fix /sunset url
   }, (res) => {
     t.equal(res.statusCode, 200, 'should response with status code of 200');
-    t.equal(res.payload, 'You are searching for paris\nTime in UTC:\nsunrise:4:27:43 AM, sunset:7:25:44 PM')
+    t.equal(res.payload, 'You are searching for paris\nGoogle thinks you are searching Paris, France\nTime in UTC:\nsunrise:4:27:43 AM, sunset:7:25:44 PM')
     t.end();
   })
 })

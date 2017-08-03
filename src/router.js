@@ -5,7 +5,7 @@ const router = (req, res) => {
   const url = req.url;
   if (url === '/') {
     handlers.handleRoutes(res, 'views/index.html');
-  } else if (url.indexOf('/sunset') !== -1) {
+  } else if (url.indexOf('/sunset') === 0) {
     handlers.handleSunset(res, url, function(err, result) {
       if (err) {
         res.writeHead(500, "Content-Type:text/html");
