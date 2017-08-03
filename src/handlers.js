@@ -44,7 +44,6 @@ const handleSunset = (res, url, callback) => {
     if (data.results.length == 0) {
       callback(null, `you sure that's a valid location, buddy?`);
     } else {
-      console.log(data);
       const lat = data.results[0].geometry.location.lat;
       const lng = data.results[0].geometry.location.lng;
       const address = data.results[0].formatted_address;
