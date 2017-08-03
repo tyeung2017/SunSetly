@@ -1,6 +1,5 @@
 const path = require('path');
 const fs = require('fs');
-const https = require('https');
 const apiRequest = require("./myRequest");
 
 
@@ -31,7 +30,13 @@ const handleRoutes = (res, url) => {
 const handleSunset = (res, url, callback) => {
   const cityName = url.split('&')[0].split('cityname=')[1];
   let date = url.split('date=')[1];
-  if (date && date.length === 0)
+  let error;
+  if(!url.match("cityname=")&& !url.match("date=") || cityName.length === 0){
+    error = new Error("you are not using our UI, are you?");
+    callback(error);
+    return;
+  }
+  if (date.length === 0)
     date = "today";
   //please filter out empty date input
   const googleUrl = `https://maps.googleapis.com/maps/api/geocode/json?&address=${cityName}`; //check for google api for no results
