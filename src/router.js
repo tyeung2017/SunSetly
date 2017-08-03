@@ -9,7 +9,7 @@ const router = (req, res) => {
     handlers.handleSunset(res, url, function(err, result) {
       if (err) {
         res.writeHead(500, "Content-Type:text/html");
-        res.end("<h1>heather broke something on the back end</h1>");
+        res.end(`<h1>${err.message}</h1>`);
       } else {
         res.writeHead(200, "Content-Type:text/html");
         res.end(result);
