@@ -48,7 +48,7 @@ test('Sunset router', (t) => {
     method: 'get',
     url: '/sunset' //fix /sunset url
   }, (res) => {
-    t.equal(res.statusCode, 500, 'should response with status code of 200');
+    t.equal(res.statusCode, 500, 'should response with status code of 500');
     t.equal(res.payload, `<h1>you are not using our UI, are you?</h1>`)
     t.end();
   })
