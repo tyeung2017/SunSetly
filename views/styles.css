@@ -1,72 +1,182 @@
 /*mobile first design*/
 
-* {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
 }
 
 body {
-  background-image: url(./assets/backgroundimageMobile.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  width: 100%;
-  height: 100vh;
+  font-family: 'Nunito', sans-serif;
+  color: #384047;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/3/3a/Sunset_in_Coquitlam.jpg") 0% 0% / cover no-repeat; zoom: 1;
 }
-
 .header {
+text-align: center;
+}
+
+form {
+  max-width: 300px;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background: #f4f7f8;
+  border-radius: 8px;
+}
+
+h1 {
+  margin: 0 0 30px 0;
   text-align: center;
 }
-
-.main-container {
-  margin-top: 35%;
+#logo {
+  margin: 0 auto;
+  width: 350px;
 }
 
-.sunsetly-title {
-  display: block;
-  text-align: center;
-  margin-bottom: 0.8rem;
-}
-
-.h3 {
-  text-shadow: 0 0 3px #272525;
-  font-size: 2rem;
-}
-
-.title-p {
-  text-shadow: 0 0 3px #272525;
-  font-size: 1.2rem;
-}
-
-.form {
-  margin-top: 0;
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+select {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  font-size: 16px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 15px;
   width: 100%;
-  height: 5rem;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  margin-bottom: 30px;
 }
 
-.date-box, .city-box {
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 0 4px 8px 0;
+}
+
+select {
+  padding: 6px;
+  height: 32px;
+  border-radius: 2px;
+}
+
+button {
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+  background-color: background: #41295a;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2F0743, #41295a);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2F0743, #41295a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
   border-radius: 5px;
-  width: 60%;
-  font-size: 1.3rem;
+  width: 100%;
+  border: 1px solid #41295a;
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+  margin-bottom: 10px;
+}
+
+fieldset {
+  margin-bottom: 30px;
+  border: none;
+}
+
+legend {
+  font-size: 1.4em;
+  margin-bottom: 10px;
 }
 
 label {
-  font-size: 0;
+  display: block;
+  margin-bottom: 8px;
 }
 
-.result {
-  margin-top: 38%;
-  background-color: rgba(255, 255, 255, .25);
-  width: 100%;
-  height: 100%;
-  padding: 5% 0;
-  font-size: 1.2rem;
-  color: black;
+label.light {
+  font-weight: 300;
+  display: inline;
+}
+
+.number {
+  background-color: #5fcf80;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  font-size: 0.8em;
+  margin-right: 4px;
+  line-height: 30px;
   text-align: center;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+  border-radius: 100%;
+}
+
+#result {
+   max-width: 300px;
+   margin: 20px auto;
+   padding: 10px 20px;
+   background: #f4f7f8;
+   border-radius: 8px;
+   text-align: center;
+   font-size: 30px;
+   display: none;
+
+
 }
 
 
-/*below, this is for desktop */
 
-@media (min-width: 700px) {}
+
+
+
+/* This is for desktop view*/
+
+@media (min-width: 700px) {
+   form, #result {
+      max-width: 700px;
+      font-size: 30px
+   }
+
+   #logo {
+     margin: 0 auto;
+     width: 350px;
+   }
+}
+/* This is for mobile view*/
+@media screen and (max-width: 480px) {
+
+  form, #result {
+    max-width: 480px;
+  }
+  form {
+     margin-top: 20%;
+ }
+
+ #result {
+    font-size: 15px;
+}
+
+}
+#logo {
+  margin: 0 auto;
+  width: 250px;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #384047;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/3/3a/Sunset_in_Coquitlam.jpg");
+}
+
+}
